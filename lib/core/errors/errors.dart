@@ -9,21 +9,21 @@ sealed class Failure extends Equatable {
 }
 
 // General failures
-class NetworkFailure extends Failure {
+final class NetworkFailure extends Failure {
   NetworkFailure() : super([]);
 }
 
-class ServerFailure extends Failure {
+final class ServerFailure extends Failure {
   ServerFailure({this.errorMessage}) : super([errorMessage]);
   final String? errorMessage;
 }
 
-class CacheFailure extends Failure {
+final class CacheFailure extends Failure {
   CacheFailure({this.errorMessage}) : super([errorMessage]);
   final String? errorMessage;
 }
 
-class UnExpectedFailure<T> extends Failure {
+final class UnExpectedFailure<T> extends Failure {
   UnExpectedFailure({this.errorMessage, this.data}) : super([errorMessage, data]);
   final String? errorMessage;
   final T? data;

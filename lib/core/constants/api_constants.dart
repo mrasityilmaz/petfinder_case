@@ -1,10 +1,40 @@
-import 'package:stacked/stacked_annotations.dart';
+// ignore_for_file: avoid_field_initializers_in_const_classes
 
+import 'package:flutter/foundation.dart';
+
+@immutable
 final class APIConstants {
-  APIConstants._();
+  const APIConstants._();
 
-  @factoryParam
-  static const String _baseUrl = 'https://jsonplaceholder.typicode.com/';
+  static const APIConstants _instance = APIConstants._();
 
-  static String get baseURL => _baseUrl;
+  static APIConstants get instance => _instance;
+
+  ///
+  ///  API Constants
+  ///
+
+  final String _baseEnvUrl = 'https://dog.ceo/api/';
+
+  String get baseURL => _baseEnvUrl;
+
+  ///
+  /// Service Paths
+  ///
+
+  final String _allBreedPath = 'breeds/list/all';
+
+  ///
+  ///  Service Paths Public Getters
+  ///
+
+  String get allBreedPath => _allBreedPath;
+
+  String breedRandomImagePath({required String breed, String? subBreed}) {
+    if (subBreed == null) {
+      return 'breed/$breed/images/random';
+    } else {
+      return 'breed/$breed/$subBreed/images/random';
+    }
+  }
 }

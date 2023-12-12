@@ -12,18 +12,20 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import '../core/platform/network_info.dart' as _i7;
-import '../core/services/mock_reader_service.dart' as _i6;
-import '../data/repositories/example_repo/data_sources/example_http_repository.dart'
-    as _i4;
-import '../data/repositories/example_repo/data_sources/example_mock_repository.dart'
-    as _i5;
-import '../data/repositories/example_repo/example_repository.dart' as _i9;
-import '../domain/repositories/example_repository/data_sources/ilocal_repository.dart'
+import '../core/navigator/app_navigator.dart' as _i3;
+import '../core/platform/network_info.dart' as _i12;
+import '../core/services/cache_manager_service.dart' as _i4;
+import '../core/services/mock_reader_service.dart' as _i11;
+import '../data/repositories/dog_api_repository/data_sources/dog_api_http_repository.dart'
+    as _i6;
+import '../data/repositories/dog_api_repository/data_sources/dog_api_mock_repository.dart'
+    as _i7;
+import '../data/repositories/dog_api_repository/dog_api_repository.dart' as _i9;
+import '../domain/repositories/dog_api_repository/data_sources/ilocal_repository.dart'
     as _i10;
-import '../domain/repositories/example_repository/data_sources/iremote_repository.dart'
-    as _i3;
-import '../domain/repositories/example_repository/i_example_repository.dart'
+import '../domain/repositories/dog_api_repository/data_sources/iremote_repository.dart'
+    as _i5;
+import '../domain/repositories/dog_api_repository/dog_api_repository.dart'
     as _i8;
 
 const String _real = 'real';
@@ -40,20 +42,21 @@ _i1.GetIt $initGetIt(
     environment,
     environmentFilter,
   );
-  gh.lazySingleton<_i3.IExampleRemoteRepository>(
-    () => _i4.ExampleHttpRepository(),
+  gh.lazySingleton<_i3.AppRouter>(() => _i3.AppRouter());
+  gh.lazySingleton<_i4.CustomCacheManager>(() => _i4.CustomCacheManager());
+  gh.lazySingleton<_i5.IDogApiRemoteRepository>(
+    () => _i6.DogApiHttpRepository(),
     registerFor: {_real},
   );
-  gh.lazySingleton<_i3.IExampleRemoteRepository>(
-    () => _i5.ExampleMockRepository(),
+  gh.lazySingleton<_i5.IDogApiRemoteRepository>(
+    () => _i7.DogApiMockRepository(),
     registerFor: {_mock},
   );
-  gh.lazySingleton<_i6.MockReaderService>(() => _i6.MockReaderService());
-  gh.lazySingleton<_i7.NetworkInfo>(() => _i7.NetworkInfoImpl());
-  gh.lazySingleton<_i8.IExampleRepository>(() => _i9.ExampleRepository(
-        remoteDataSource: gh<_i3.IExampleRemoteRepository>(),
-        localDataSource: gh<_i10.IExampleLocalRepository>(),
-        networkInfo: gh<_i7.NetworkInfo>(),
+  gh.lazySingleton<_i8.IDogApiRepository>(() => _i9.DogApiRepository(
+        remoteDataSource: gh<_i5.IDogApiRemoteRepository>(),
+        localDataSource: gh<_i10.IDogApiLocalRepository>(),
       ));
+  gh.lazySingleton<_i11.MockReaderService>(() => _i11.MockReaderService());
+  gh.lazySingleton<_i12.NetworkInfo>(() => _i12.NetworkInfoImpl());
   return getIt;
 }
