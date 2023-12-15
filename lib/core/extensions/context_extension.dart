@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 extension ContextExtension on BuildContext {
   MediaQueryData get mediaQuery => MediaQuery.of(this);
+  Size get screenSize => mediaQuery.size;
 }
 
 extension MediaQueryExtension on BuildContext {
@@ -14,6 +15,13 @@ extension MediaQueryExtension on BuildContext {
   double get normalValue => height * 0.02;
   double get mediumValue => height * 0.04;
   double get highValue => height * 0.1;
+}
+
+extension BorderRadiusExtension on BuildContext {
+  BorderRadius get borderRadiusLow => BorderRadius.circular(lowValue);
+  BorderRadius get borderRadiusNormal => BorderRadius.circular(normalValue);
+  BorderRadius get borderRadiusMedium => BorderRadius.circular(mediumValue);
+  BorderRadius get borderRadiusHigh => BorderRadius.circular(highValue);
 }
 
 extension ThemeExtension on BuildContext {
@@ -39,6 +47,14 @@ extension PaddingExtensionSymetric on BuildContext {
   EdgeInsets get paddingNormalHorizontal => EdgeInsets.symmetric(horizontal: normalValue);
   EdgeInsets get paddingMediumHorizontal => EdgeInsets.symmetric(horizontal: mediumValue);
   EdgeInsets get paddingHighHorizontal => EdgeInsets.symmetric(horizontal: highValue);
+
+  EdgeInsets get screenPaddingTop => const EdgeInsets.only(top: 12);
+  EdgeInsets get screenPaddingBottom => const EdgeInsets.only(bottom: 12);
+  EdgeInsets get adaptiveScreenPaddingBottom => mediaQuery.viewPadding.bottom > 0 ? EdgeInsets.zero : screenPaddingBottom;
+  EdgeInsets get screenPadding => screenPaddingHorizontal + screenPaddingVertical;
+  EdgeInsets get screenPaddingHorizontal => const EdgeInsets.symmetric(horizontal: 16);
+  EdgeInsets get screenPaddingVertical => const EdgeInsets.symmetric(vertical: 12);
+  EdgeInsets get screenNotchFabPadding => const EdgeInsets.only(bottom: (kMinInteractiveDimension * .5) - 12);
 }
 
 extension PaddingExtensionSides on BuildContext {

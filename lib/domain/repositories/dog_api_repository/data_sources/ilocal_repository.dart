@@ -1,4 +1,5 @@
 import 'package:petfinder/core/extensions/dartz_extension.dart';
+import 'package:petfinder/data/models/breed_model/breed_model.dart';
 
 abstract class IDogApiLocalRepository {
   ///
@@ -8,5 +9,5 @@ abstract class IDogApiLocalRepository {
   ///  Future<Either<Failure, DataModel<Data>>> getDataFromLocal();
   ///
 
-  Future<DataModel<List<({String url, bool isCachedSuccessfully})>>> addListOfImagesIntoCache({required List<String> images});
+  Future<DataModel<List<({String url, BreedModel breedModel, bool isCachedSuccessfully})>>> addListOfImagesIntoCache({required List<(String, BreedModel)> images});
 }

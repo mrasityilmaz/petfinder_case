@@ -22,6 +22,7 @@ BreedModel _$BreedModelFromJson(Map<String, dynamic> json) {
 mixin _$BreedModel {
   String get breedName => throw _privateConstructorUsedError;
   List<String> get subBreeds => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,7 @@ abstract class $BreedModelCopyWith<$Res> {
           BreedModel value, $Res Function(BreedModel) then) =
       _$BreedModelCopyWithImpl<$Res, BreedModel>;
   @useResult
-  $Res call({String breedName, List<String> subBreeds});
+  $Res call({String breedName, List<String> subBreeds, String? imageUrl});
 }
 
 /// @nodoc
@@ -53,6 +54,7 @@ class _$BreedModelCopyWithImpl<$Res, $Val extends BreedModel>
   $Res call({
     Object? breedName = null,
     Object? subBreeds = null,
+    Object? imageUrl = freezed,
   }) {
     return _then(_value.copyWith(
       breedName: null == breedName
@@ -63,6 +65,10 @@ class _$BreedModelCopyWithImpl<$Res, $Val extends BreedModel>
           ? _value.subBreeds
           : subBreeds // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      imageUrl: freezed == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -75,7 +81,7 @@ abstract class _$$_BreedModelCopyWith<$Res>
       __$$_BreedModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String breedName, List<String> subBreeds});
+  $Res call({String breedName, List<String> subBreeds, String? imageUrl});
 }
 
 /// @nodoc
@@ -91,6 +97,7 @@ class __$$_BreedModelCopyWithImpl<$Res>
   $Res call({
     Object? breedName = null,
     Object? subBreeds = null,
+    Object? imageUrl = freezed,
   }) {
     return _then(_$_BreedModel(
       breedName: null == breedName
@@ -101,6 +108,10 @@ class __$$_BreedModelCopyWithImpl<$Res>
           ? _value._subBreeds
           : subBreeds // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      imageUrl: freezed == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -109,7 +120,9 @@ class __$$_BreedModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_BreedModel extends _BreedModel {
   const _$_BreedModel(
-      {required this.breedName, required final List<String> subBreeds})
+      {required this.breedName,
+      required final List<String> subBreeds,
+      this.imageUrl})
       : _subBreeds = subBreeds,
         super._();
 
@@ -125,6 +138,9 @@ class _$_BreedModel extends _BreedModel {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_subBreeds);
   }
+
+  @override
+  final String? imageUrl;
 
   @JsonKey(ignore: true)
   @override
@@ -143,7 +159,8 @@ class _$_BreedModel extends _BreedModel {
 abstract class _BreedModel extends BreedModel {
   const factory _BreedModel(
       {required final String breedName,
-      required final List<String> subBreeds}) = _$_BreedModel;
+      required final List<String> subBreeds,
+      final String? imageUrl}) = _$_BreedModel;
   const _BreedModel._() : super._();
 
   factory _BreedModel.fromJson(Map<String, dynamic> json) =
@@ -153,6 +170,8 @@ abstract class _BreedModel extends BreedModel {
   String get breedName;
   @override
   List<String> get subBreeds;
+  @override
+  String? get imageUrl;
   @override
   @JsonKey(ignore: true)
   _$$_BreedModelCopyWith<_$_BreedModel> get copyWith =>

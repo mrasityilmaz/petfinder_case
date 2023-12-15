@@ -6,5 +6,5 @@ abstract class IDogApiRepository {
 
   Future<DataModel<String>> fetchRandomImageBySubBreed({required String breed, String? subBreed});
 
-  Future<DataModel<List<({String url, bool isCachedSuccessfully})>>> addListOfImagesIntoCache({required List<String> images});
+  Future<DataModel<List<({String url, BreedModel breedModel, bool isCachedSuccessfully})>>> addListOfImagesIntoCache({required List<(String, BreedModel)> images});
 }

@@ -25,7 +25,7 @@ class DogApiRepository implements IDogApiRepository {
   }
 
   @override
-  Future<DataModel<List<({String url, bool isCachedSuccessfully})>>> addListOfImagesIntoCache({required List<String> images}) async {
+  Future<DataModel<List<({String url, BreedModel breedModel, bool isCachedSuccessfully})>>> addListOfImagesIntoCache({required List<(String, BreedModel)> images}) async {
     return localDataSource.addListOfImagesIntoCache(images: images);
   }
 }

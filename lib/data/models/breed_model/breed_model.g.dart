@@ -11,10 +11,12 @@ _$_BreedModel _$$_BreedModelFromJson(Map<String, dynamic> json) =>
       breedName: json['breedName'] as String,
       subBreeds:
           (json['subBreeds'] as List<dynamic>).map((e) => e as String).toList(),
+      imageUrl: json['imageUrl'] as String?,
     );
 
 Map<String, dynamic> _$$_BreedModelToJson(_$_BreedModel instance) =>
     <String, dynamic>{
       'breedName': instance.breedName,
       'subBreeds': instance.subBreeds,
+      'imageUrl': instance.imageUrl,
     };

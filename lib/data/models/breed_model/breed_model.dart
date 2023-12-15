@@ -18,6 +18,7 @@ class BreedModel with _$BreedModel, EquatableMixin {
   const factory BreedModel({
     required String breedName,
     required List<String> subBreeds,
+    String? imageUrl,
   }) = _BreedModel;
 
   const BreedModel._();
