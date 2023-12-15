@@ -3,6 +3,15 @@
 
 ## About
 
+<img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/08e413e0-a579-4ec1-927e-dabb1d536269">
+<img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/e9ed531e-d181-4f36-95d3-9f1e80d046bd">
+<img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/62a069ac-1859-4184-a65b-57eec3cda6ee">
+<img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/35707892-7edd-4caa-a6e0-f650b613e7b6">
+<img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/9abc9a80-2425-4b7f-bf18-eef85437b7a0">
+<img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/02e79898-9ecc-46d2-b6c9-780f3c7d12b3">
+<img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/fcf71474-5c2b-4b80-9167-16eed82d3cb5">
+
+
 
 
 
