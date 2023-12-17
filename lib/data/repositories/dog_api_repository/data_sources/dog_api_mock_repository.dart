@@ -7,7 +7,7 @@ import 'package:petfinder/data/models/base_response_model/base_response_model.da
 import 'package:petfinder/data/models/breed_model/breed_model.dart';
 import 'package:petfinder/domain/repositories/dog_api_repository/data_sources/iremote_repository.dart';
 import 'package:petfinder/injection/injection_container.dart';
-import 'package:rest_api_package/requests/rest_api_request.dart';
+import 'package:petfinder/vendor/rest_api_pkg/requests/rest_api_request.dart';
 
 @Environment('mock')
 @LazySingleton(as: IDogApiRemoteRepository)

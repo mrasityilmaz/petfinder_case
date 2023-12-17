@@ -8,7 +8,7 @@ import 'package:petfinder/data/requests/dog_api_requests/fetch_all_breed_request
 import 'package:petfinder/data/requests/dog_api_requests/fetch_random_breed_image_request.dart';
 import 'package:petfinder/domain/repositories/dog_api_repository/data_sources/iremote_repository.dart';
 import 'package:petfinder/injection/injection_container.dart';
-import 'package:rest_api_package/rest_api_package.dart';
+import 'package:petfinder/vendor/rest_api_pkg/rest_api_package.dart';
 
 @Environment('real')
 @LazySingleton(as: IDogApiRemoteRepository)

@@ -6,8 +6,8 @@ import 'package:petfinder/core/extensions/list_extension.dart';
 import 'package:petfinder/data/repositories/dog_api_repository/data_sources/dog_api_hive_repository.dart';
 import 'package:petfinder/domain/repositories/dog_api_repository/data_sources/ilocal_repository.dart';
 import 'package:petfinder/injection/injection_container.config.dart';
-import 'package:rest_api_package/requests/rest_api_request.dart';
-import 'package:rest_api_package/rest_api_package.dart';
+import 'package:petfinder/vendor/rest_api_pkg/requests/rest_api_request.dart';
+import 'package:petfinder/vendor/rest_api_pkg/rest_api_package.dart';
 
 final locator = GetIt.instance;
 late final DataType environmentTag;

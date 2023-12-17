@@ -1,5 +1,5 @@
 import 'package:petfinder/core/constants/api_constants.dart';
-import 'package:rest_api_package/requests/rest_api_request.dart';
+import 'package:petfinder/vendor/rest_api_pkg/requests/rest_api_request.dart';
 
 final class FetchRandomBreedImageByBreedRequest extends IRestApiRequest {
   FetchRandomBreedImageByBreedRequest({required this.breed, this.subBreed}) {

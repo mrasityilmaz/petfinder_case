@@ -9,7 +9,7 @@ import 'package:petfinder/core/navigator/app_navigator.dart';
 import 'package:petfinder/data/models/breed_model/breed_model.dart';
 import 'package:petfinder/domain/repositories/dog_api_repository/dog_api_repository.dart';
 import 'package:petfinder/injection/injection_container.dart';
-import 'package:rest_api_package/requests/rest_api_request.dart';
+import 'package:petfinder/vendor/rest_api_pkg/requests/rest_api_request.dart';
 
 part 'dog_bloc_event.dart';
 part 'dog_bloc_state.dart';
