@@ -2,6 +2,7 @@
 
 
 ## About
+![ss](https://github.com/mrasityilmaz/petfinder_case/blob/main/preview.png)
 
 <img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/08e413e0-a579-4ec1-927e-dabb1d536269">
 <img width="200" heigth="450" alt="fi" src="https://github.com/mrasityilmaz/petfinder_case/assets/81583706/e9ed531e-d181-4f36-95d3-9f1e80d046bd">
